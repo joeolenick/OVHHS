@@ -405,7 +405,7 @@ QUnit = {
 			nameHtml: nameHtml,
 			testName: testName,
 			expected: expected,
-			async: async,
+			async: false,
 			callback: callback,
 			module: config.currentModule,
 			moduleTestEnvironment: config.currentModuleTestEnvironment,

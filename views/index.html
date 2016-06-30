@@ -1,12 +1,16 @@
-<!DOCTYPE html>
-<!--[if IE 8]>			<html class="ie ie8"> <![endif]-->
-<!--[if IE 9]>			<html class="ie ie9"> <![endif]-->
-<!--[if gt IE 9]><!-->	<html> <!--<![endif]-->
+<!DOCTYPE html >
+<!--[if IE 8]>			<html class="ie ie8" ng-app="ovhhs"> <![endif]-->
+<!--[if IE 9]>			<html class="ie ie9" ng-app="ovhhs"> <![endif]-->
+<!--[if gt IE 9]><!-->	<html ng-app="ovhhs"> <!--<![endif]-->
+	
+	
 	<head>
 		<meta charset="utf-8" />
-		<title>Atropos - Responsive Multipurpose</title>
+		<title>OVHHS</title>
 		<meta name="keywords" content="HTML5,CSS3" />
 		<meta name="description" content="" />
+		
+		<link rel="shortcut icon" href="components/images/favicon.ico" type="image/x-icon" />
 
 		<!-- mobile settings -->
 		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
@@ -15,31 +19,29 @@
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet" type="text/css" />
 
 		<!-- CORE CSS -->
-		<link href="../assets/components/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-		<link href="../assets/components/css/font-awesome.css" rel="stylesheet" type="text/css" />
-		<link href="../assets/components/plugins/owl-carousel/owl.carousel.css" rel="stylesheet" type="text/css" />
-		<link href="../assets/components/plugins/owl-carousel/owl.theme.css" rel="stylesheet" type="text/css" />
-		<link href="../assets/components/plugins/owl-carousel/owl.transitions.css" rel="stylesheet" type="text/css" />
-		<link href="../assets/components/plugins/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css" />
-		<link href="../assets/components/css/animate.css" rel="stylesheet" type="text/css" />
-		<link href="../assets/components/css/superslides.css" rel="stylesheet" type="text/css" />
+		<link href="/components/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<link href="/components/css/font-awesome.css" rel="stylesheet" type="text/css" />
+		<link href="/components/plugins/owl-carousel/owl.carousel.css" rel="stylesheet" type="text/css" />
+		<link href="/components/plugins/owl-carousel/owl.theme.css" rel="stylesheet" type="text/css" />
+		<link href="/components/plugins/owl-carousel/owl.transitions.css" rel="stylesheet" type="text/css" />
+		<link href="/components/plugins/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css" />
+		<link href="/components/css/animate.css" rel="stylesheet" type="text/css" />
+		<link href="/components/css/superslides.css" rel="stylesheet" type="text/css" />
 
 		<!-- REVOLUTION SLIDER -->
-		<link href="../assets/components/plugins/revolution-slider/css/settings.css" rel="stylesheet" type="text/css" />
+		<link href="/components/plugins/revolution-slider/css/settings.css" rel="stylesheet" type="text/css" />
 
 		<!-- THEME CSS -->
-		<link href="../assets/components/css/essentials.css" rel="stylesheet" type="text/css" />
-		<link href="../assets/components/css/layout.css" rel="stylesheet" type="text/css" />
-		<link href="../assets/components/css/layout-responsive.css" rel="stylesheet" type="text/css" />
-		<link href="../assets/components/css/color_scheme/blue.css" rel="stylesheet" type="text/css" /><!-- blue: default style -->
-		<!--<link id="css_dark_skin" href="assets/css/layout-dark.css" rel="stylesheet" type="text/css" />--><!-- DARK SKIN -->
-
+		<link href="/components/css/essentials.css" rel="stylesheet" type="text/css" />
+		<link href="/components/css/layout.css" rel="stylesheet" type="text/css" />
+		<link href="/components/css/layout-responsive.css" rel="stylesheet" type="text/css" />
+		<link href="/components/css/color_scheme/blue.css" rel="stylesheet" type="text/css" />
 
 		<!-- Morenizr -->
-		<script type="text/javascript" src="../assets/components/plugins/modernizr.min.js"></script>
+		<script type="text/javascript" src="/components/plugins/modernizr.min.js"></script>
 	</head>
-	<body class="boxed pattern"><!-- Available classes for body: boxed , pattern1...pattern10 . Background Image - example add: data-background="assets/images/boxed_background/1.jpg"  -->
-
+	<body class="boxed pattern" ng-controller="homeCtrl">
+		
 		<!-- TOP NAV -->
 		<header id="topNav">
 			<div class="container">
@@ -50,54 +52,74 @@
 				</button>
 
 				<!-- Logo text or image -->
-				<a class="logo" href="index.html">
-					<img src="../assets/components/images/logo2.png" alt="OVHHS" />
+				<a class="logo" href="#/home">
+					<img src="/components/images/logo2.png" alt="OVHHS" />
 				</a>
 
 				<!-- Top Nav -->
 				<div class="navbar-collapse nav-main-collapse collapse pull-right">
 					<nav class="nav-main mega-menu">
 						<ul class="nav nav-pills nav-main scroll-menu" id="topMain">
-
+						
+							<!--<li class="dropdown">-->
+							<!--	<a class="dropdown-toggle" href="#/home">-->
+							<!--		<b>Home</b> <i class="fa"></i>-->
+							<!--	</a>-->
+								
+							</li>
 							<li class="dropdown">
-								<a class="dropdown-toggle" href="#">
-									<b>Home</b> <i class="fa"></i>
+								<a class="dropdown-toggle" href="http://www.primehealthcare.com">
+									<b>Prime</b> <i class="fa"></i>
 								</a>
 								
 							</li>
+							<li class="dropdown">
+								<a class="dropdown-toggle" href="http://www.elch.org">
+									<b>ELCH</b> <i class="fa"></i>
+								</a>
+								
+							</li>
+						
 							
-							<li class="dropdown">
-								<a class="dropdown-toggle" href="#">
-									<b>Our Family</b> <i class="fa fa-angle-down"></i>
-								</a>
-								<ul class="dropdown-menu">
-									<li><a href="http://www.primehealthcare.com/">Prime Healthcare</a></li>
-									<li class="divider"></li>
-									<li><a href="#">Ohio Vally Home Care</a></li>
-									<li><a href="#">Senior Link</a></li>
-									<li><a href="http://www.elch.org">East Liverpool City Hospital</a></li>
-								</ul>
-							</li>
-							<li class="dropdown">
-								<a class="dropdown-toggle" href="#">
-									<b>About Us</b> <i class="fa fa-angle-down"></i>
-								</a>
-								<ul class="dropdown-menu">
-									<li><a href="#">Stuff</a></li>
-									<li class="divider"></li>
-									<li><a href="#">Stuff</a></li>
-								</ul>
-							</li>
-							<li class="dropdown">
-								<a class="dropdown-toggle" href="#">
-									<b>Etc</b> <i class="fa fa-angle-down"></i>
-								</a>
-								<ul class="dropdown-menu">
-									<li><a href="#">Stuff</a></li>
-									<li class="divider"></li>
-									<li><a href="#">Stuff</a></li>
-								</ul>
-							</li>
+							
+							<!--Future use, once OVHH, OVHC, and SrLink sites are done. -->
+							
+							<!--<li class="dropdown">-->
+							<!--	<a class="dropdown-toggle" href="#">-->
+							<!--		<b>Our Family</b> <i class="fa fa-angle-down"></i>-->
+							<!--	</a>-->
+							<!--	<ul class="dropdown-menu">-->
+							<!--		<li><a href="#/OVHH">Home Health</a></li>-->
+							<!--		<li><a href="#/OVHC">Home Care</a></li>-->
+							<!--		<li><a href="#/SrLink">Senior Link</a></li>-->
+							<!--		<li class="divider"></li>-->
+							<!--		<li><a href="http://www.primehealthcare.com/">Prime Healthcare</a></li>-->
+							<!--		<li><a href="http://www.elch.org">East Liverpool City Hospital</a></li>-->
+									
+									
+									
+							<!--	</ul>-->
+							<!--</li>-->
+							<!--<li class="dropdown">-->
+							<!--	<a class="dropdown-toggle">-->
+							<!--		<b>About Us</b> <i class="fa fa-angle-down"></i>-->
+							<!--	</a>-->
+							<!--	<ul class="dropdown-menu">-->
+							<!--		<li><a href="#/aboutus">OVHHS</a></li>-->
+							<!--		<li class="divider"></li>-->
+							<!--		<li><a href="#">Stuff</a></li>-->
+							<!--	</ul>-->
+							<!--</li>-->
+							<!--<li class="dropdown">-->
+							<!--	<a class="dropdown-toggle" href="#">-->
+							<!--		<b>Etc</b> <i class="fa fa-angle-down"></i>-->
+							<!--	</a>-->
+							<!--	<ul class="dropdown-menu">-->
+							<!--		<li><a href="#">Stuff</a></li>-->
+							<!--		<li class="divider"></li>-->
+							<!--		<li><a href="#">Stuff</a></li>-->
+							<!--	</ul>-->
+							<!--</li>-->
 						</ul>
 					</nav>
 				</div>
@@ -143,7 +165,7 @@
 							<h3>CONTACT</h3>
 
 							<p class="contact-desc">
-								Ohio Valley Home Health Services, Ohio Valley Home Care, and Senior Link are subsidiaries of Prime Healthcare. 
+								Ohio Valley Home Health Services, Ohio Valley Home Care, and Senior Link are Subsidiaries of Prime Healthcare Foundation. 
 							</p>
 							<address class="font-opensans">
 								<ul>
@@ -168,7 +190,7 @@
 						<!-- FOOTER LOGO -->
 						<div class="column logo col-md-4 text-center">
 							<div class="logo-content">
-								<img class="animate_fade_in" src="../assets/components/images/PrimeLogo.png" width="200" alt="" />
+								<img class="animate_fade_in" src="/components/images/PrimeLogo.png" width="200" alt="" />
 								<h4>Ohio Valley Home Health Services</h4>
 							</div>											
 						</div>
@@ -176,25 +198,25 @@
 
 
 						<!-- FOOTER LATEST POSTS -->
-						<div class="column col-md-4 text-right">
-							<h3>RECENT POSTS</h3>
+						<!--<div class="column col-md-4 text-right">-->
+						<!--	<h3>RECENT POSTS</h3>-->
 
-							<div class="post-item">
-								<small>JANUARY 2, 2014 BY ADMIN</small>
-								<h3><a href="blog-single-sidebar-left.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></h3>
-							</div>
-							<div class="post-item">
-								<small>JANUARY 2, 2014 BY ADMIN</small>
-								<h3><a href="blog-single-sidebar-left.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></h3>
-							</div>
-							<div class="post-item">
-								<small>JANUARY 2, 2014 BY ADMIN</small>
-								<h3><a href="blog-single-sidebar-left.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></h3>
-							</div>
+						<!--	<div class="post-item">-->
+						<!--		<small>JANUARY 2, 2014 BY ADMIN</small>-->
+						<!--		<h3><a href="blog-single-sidebar-left.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></h3>-->
+						<!--	</div>-->
+						<!--	<div class="post-item">-->
+						<!--		<small>JANUARY 2, 2014 BY ADMIN</small>-->
+						<!--		<h3><a href="blog-single-sidebar-left.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></h3>-->
+						<!--	</div>-->
+						<!--	<div class="post-item">-->
+						<!--		<small>JANUARY 2, 2014 BY ADMIN</small>-->
+						<!--		<h3><a href="blog-single-sidebar-left.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></h3>-->
+						<!--	</div>-->
 
-							<a href="blog-masonry-sidebar.html" class="view-more pull-right">View Blog <i class="fa fa-arrow-right"></i></a>
+						<!--	<a href="blog-masonry-sidebar.html" class="view-more pull-right">View Blog <i class="fa fa-arrow-right"></i></a>-->
 
-						</div>
+						<!--</div>-->
 						<!-- /FOOTER LATEST POSTS -->
 
 					</div>
@@ -209,28 +231,38 @@
 
 
 		<!-- JAVASCRIPT FILES -->
-		<script type="text/javascript" src="../assets/components/plugins/jquery-2.1.4.min.js"></script>
-		<script type="text/javascript" src="../assets/components/plugins/jquery.easing.1.3.js"></script>
-		<script type="text/javascript" src="../assets/components/plugins/jquery.cookie.js"></script>
-		<script type="text/javascript" src="../assets/components/plugins/jquery.appear.js"></script>
-		<script type="text/javascript" src="../assets/components/plugins/jquery.isotope.js"></script>
-		<script type="text/javascript" src="../assets/components/plugins/masonry.js"></script>
+		<script src="/components/plugins/jquery-2.1.4.min.js"></script>
+		<script src="/components/plugins/jquery.easing.1.3.js"></script>
+		<script src="/components/plugins/jquery.cookie.js"></script>
+		<script src="/components/plugins/jquery.appear.js"></script>
+		<script src="/components/plugins/jquery.isotope.js"></script>
+		<script src="/components/plugins/masonry.js"></script>
 
-		<script type="text/javascript" src="../assets/components/plugins/bootstrap/js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="../assets/components/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
-		<script type="text/javascript" src="../assets/components/plugins/owl-carousel/owl.carousel.min.js"></script>
-		<script type="text/javascript" src="../assets/components/plugins/stellar/jquery.stellar.min.js"></script>
-		<script type="text/javascript" src="../assets/components/plugins/knob/js/jquery.knob.js"></script>
-		<script type="text/javascript" src="../assets/components/plugins/jquery.backstretch.min.js"></script>
-		<script type="text/javascript" src="../assets/components/plugins/superslides/dist/jquery.superslides.min.js"></script>
-		<script type="text/javascript" src="../assets/components/plugins/mediaelement/build/mediaelement-and-player.min.js"></script>
+		<script src="/components/plugins/bootstrap/js/bootstrap.min.js"></script>
+		<script src="/components/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+		<script src="/components/plugins/owl-carousel/owl.carousel.min.js"></script>
+		<script src="/components/plugins/stellar/jquery.stellar.min.js"></script>
+		<script src="/components/plugins/knob/js/jquery.knob.js"></script>
+		<script src="/components/plugins/jquery.backstretch.min.js"></script>
+		<script src="/components/plugins/superslides/dist/jquery.superslides.min.js"></script>
+		<script src="/components/plugins/mediaelement/build/mediaelement-and-player.min.js"></script>
 
-		<!-- REVOLUTION SLIDER -->
-		<script type="text/javascript" src="../assets/components/plugins/revolution-slider/js/jquery.themepunch.tools.min.js"></script>
-		<script type="text/javascript" src="../assets/components/plugins/revolution-slider/js/jquery.themepunch.revolution.min.js"></script>
-		<script type="text/javascript" src="../assets/components/js/slider_revolution.js"></script>
 
-		<script type="text/javascript" src="../assets/components/js/scripts.js"></script>
+		
+		<!-- ANGULAR SCRIPTS-->
+		<script src="/components/angular/angular.min.js"></script>
+		<script src="/components/angular-route/angular-route.min.js"></script>
+		
+		<script src="/angularjs/app.js"></script>
+		
+		<script src="/angularjs/home.js"></script>
+		<script src="/angularjs/aboutUs.js"></script>
+		<script src="/angularjs/OVHC.js"></script>
+		<script src="/angularjs/OVHH.js"></script>
+		<script src="/angularjs/SrLink.js"></script>
+		
+		
+		
 
 		<!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information. -->
 		<!--<script>
