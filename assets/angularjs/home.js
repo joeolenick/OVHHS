@@ -4,7 +4,7 @@ angular.module('ovhhs.home', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/home', {
-    templateUrl: '/template/home',
+        templateUrl: '/views/home/home.tpl.html',
     controller: 'homeCtrl'
   });
 }])

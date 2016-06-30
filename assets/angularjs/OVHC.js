@@ -4,7 +4,7 @@ angular.module('ovhhs.OVHC', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/OVHC', {
-    templateUrl: '/template/OVHC',
+    templateUrl: '/views/OVHC/OVHC.tpl.html',
     controller: 'OVHCCtrl'
   });
 }])

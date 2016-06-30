@@ -4,7 +4,7 @@ angular.module('ovhhs.SrLink', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/SrLink', {
-    templateUrl: '/template/SrLink',
+    templateUrl: '/views/SrLink/SrLink.tpl.html',
     controller: 'SrLinkCtrl'
   });
 }])
