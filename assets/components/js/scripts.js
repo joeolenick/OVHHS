@@ -62,9 +62,9 @@
 		jQuery("a[data-toggle=tooltip]").tooltip();
 		
 		/** Fitvids [Youtube|Vimeo] **/
-		if(jQuery(".fullwidthbanner iframe").length < 1 && jQuery(".fullscreenbanner iframe").length < 1 && jQuery(".fullscreenvideo").length < 1) { // disable fitvids if revolution slider video is present!
-			jQuery("body").fitVids(); 
-		}
+		// if(jQuery(".fullwidthbanner iframe").length < 1 && jQuery(".fullscreenbanner iframe").length < 1 && jQuery(".fullscreenvideo").length < 1) { // disable fitvids if revolution slider video is present!
+		// 	jQuery("body").fitVids(); 
+		// }
 
 		/** 
 			price slider 
@@ -1202,7 +1202,7 @@ function _toggle() {
 	function showMap(initWhat) {
 		var script 		= document.createElement('script');
 		script.type 	= 'text/javascript';
-		script.src 		= 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true&callback='+initWhat;
+		script.src 		= '//maps.google.com/maps/api/js?key=AIzaSyCqCn84CgZN6o1Xc3P4dM657HIxkX3jzPY&callback='+initWhat;
 		document.body.appendChild(script);
 	}
 
@@ -1476,82 +1476,82 @@ function _toggle() {
 /** FITVIDS
 	http://fitvidsjs.com/
  **************************************************************** **/
-(function( $ ){
+// (function( $ ){
 
-  "use strict";
+//   "use strict";
 
-  $.fn.fitVids = function( options ) {
-    var settings = {
-      customSelector: null
-    };
+//   $.fn.fitVids = function( options ) {
+//     var settings = {
+//       customSelector: null
+//     };
 
-    if(!document.getElementById('fit-vids-style')) {
+//     if(!document.getElementById('fit-vids-style')) {
 
-      var div = document.createElement('div'),
-          ref = document.getElementsByTagName('base')[0] || document.getElementsByTagName('script')[0];
+//       var div = document.createElement('div'),
+//           ref = document.getElementsByTagName('base')[0] || document.getElementsByTagName('script')[0];
 
-      div.className = 'fit-vids-style';
-      div.id = 'fit-vids-style';
-      div.style.display = 'none';
-      div.innerHTML = '&shy;<style>         \
-        .fluid-width-video-wrapper {        \
-           width: 100%;                     \
-           position: relative;              \
-           padding: 0;                      \
-        }                                   \
-                                            \
-        .fluid-width-video-wrapper iframe,  \
-        .fluid-width-video-wrapper object,  \
-        .fluid-width-video-wrapper embed {  \
-           position: absolute;              \
-           top: 0;                          \
-           left: 0;                         \
-           width: 100%;                     \
-           height: 100%;                    \
-        }                                   \
-      </style>';
+//       div.className = 'fit-vids-style';
+//       div.id = 'fit-vids-style';
+//       div.style.display = 'none';
+//       div.innerHTML = '&shy;<style>         \
+//         .fluid-width-video-wrapper {        \
+//           width: 100%;                     \
+//           position: relative;              \
+//           padding: 0;                      \
+//         }                                   \
+//                                             \
+//         .fluid-width-video-wrapper iframe,  \
+//         .fluid-width-video-wrapper object,  \
+//         .fluid-width-video-wrapper embed {  \
+//           position: absolute;              \
+//           top: 0;                          \
+//           left: 0;                         \
+//           width: 100%;                     \
+//           height: 100%;                    \
+//         }                                   \
+//       </style>';
 
-      ref.parentNode.insertBefore(div,ref);
+//       ref.parentNode.insertBefore(div,ref);
 
-    }
+//     }
 
-    if ( options ) {
-      jQuery.extend( settings, options );
-    }
+//     if ( options ) {
+//       jQuery.extend( settings, options );
+//     }
 
-    return this.each(function(){
-      var selectors = [
-        "iframe[src*='player.vimeo.com']",
-        "iframe[src*='youtube.com']",
-        "iframe[src*='youtube-nocookie.com']",
-        "iframe[src*='kickstarter.com'][src*='video.html']",
-        "object",
-        "embed"
-      ];
+//     return this.each(function(){
+//       var selectors = [
+//         "iframe[src*='player.vimeo.com']",
+//         "iframe[src*='youtube.com']",
+//         "iframe[src*='youtube-nocookie.com']",
+//         "iframe[src*='kickstarter.com'][src*='video.html']",
+//         "object",
+//         "embed"
+//       ];
 
-      if (settings.customSelector) {
-        selectors.push(settings.customSelector);
-      }
+//       if (settings.customSelector) {
+//         selectors.push(settings.customSelector);
+//       }
 
-      var $allVideos = jQuery(this).find(selectors.join(','));
-      $allVideos = $allVideos.not("object object"); // SwfObj conflict patch
+//       var $allVideos = jQuery(this).find(selectors.join(','));
+//       $allVideos = $allVideos.not("object object"); // SwfObj conflict patch
 
-      $allVideos.each(function(){
-        var $_t = jQuery(this);
-        if (this.tagName.toLowerCase() === 'embed' && $_t.parent('object').length || $_t.parent('.fluid-width-video-wrapper').length) { return; }
-        var height = ( this.tagName.toLowerCase() === 'object' || ($_t.attr('height') && !isNaN(parseInt($_t.attr('height'), 10))) ) ? parseInt($_t.attr('height'), 10): $_t.height(),
-            width = !isNaN(parseInt($_t.attr('width'), 10)) ? parseInt($_t.attr('width'), 10): $_t.width(),
-            aspectRatio = height / width;
-        if(!$_t.attr('id')){
-          var videoID = 'fitvid' + Math.floor(Math.random()*999999);
-          $_t.attr('id', videoID);
-        }
-        $_t.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width-video-wrapper').css('padding-top', (aspectRatio * 100)+"%");
-        $_t.removeAttr('height').removeAttr('width');
-      });
-    });
-  };
-})(jQuery);
+//       $allVideos.each(function(){
+//         var $_t = jQuery(this);
+//         if (this.tagName.toLowerCase() === 'embed' && $_t.parent('object').length || $_t.parent('.fluid-width-video-wrapper').length) { return; }
+//         var height = ( this.tagName.toLowerCase() === 'object' || ($_t.attr('height') && !isNaN(parseInt($_t.attr('height'), 10))) ) ? parseInt($_t.attr('height'), 10): $_t.height(),
+//             width = !isNaN(parseInt($_t.attr('width'), 10)) ? parseInt($_t.attr('width'), 10): $_t.width(),
+//             aspectRatio = height / width;
+//         if(!$_t.attr('id')){
+//           var videoID = 'fitvid' + Math.floor(Math.random()*999999);
+//           $_t.attr('id', videoID);
+//         }
+//         $_t.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width-video-wrapper').css('padding-top', (aspectRatio * 100)+"%");
+//         $_t.removeAttr('height').removeAttr('width');
+//       });
+//     });
+//   };
+// })(jQuery);
 
 // remove fitvids for a specific element: jQuery("#myDiv").unFitVids();
 jQuery.fn.unFitVids = function () {
